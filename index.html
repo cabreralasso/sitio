@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script src="js/jquery.min.js"></script>
+<link rel="stylesheet" type="text/css" href="css/estilo.css">
+<script type="text/javascript">
+	function cargarlectura(value){
+		var url="";
+		if(value=='1'){
+			url="lectura1.html"
+		}
+		if(value=='2'){
+		url="lectura2.html"	
+		}
+		if(value=='3'){
+			url="lectura3.html"
+		}
+		if(value=='4'){
+			url="lectura4.html"
+		}
+		if(value=='5'){
+			url="lectura5.html"
+		}
+		    $.ajax({url: url, success: function(result){
+            $("#divlectuta").html(result);
+        }});
+
+
+	}
+</script>
+	<title></title>
+</head>
+<body>
+<header> cabesote</header>
+
+<section style="float: left;">
+	<nav>
+		
+		<ul>
+		<li><a href="#" onclick="cargarlectura(1)">HTML5</a></li>
+		<li><a href="#" onclick="cargarlectura(2)">CSS3</a></li>
+		<li><a href="#" onclick="cargarlectura(3)">GIT</a></li>
+		<li><a href="#" onclick="cargarlectura(4)">GITHUB EN WINDOWS</a></li>
+		<li><a href="#" onclick="cargarlectura(5)">Introducción al Diseño Web </a></li>
+		
+		</li>
+		
+
+	</nav>
+</section>
+
+
+<div class="texto" id="divlectuta">
+</div>
+
+<footer>
+	pie
+</footer>
+</body>
+</html>
